@@ -36,7 +36,11 @@ router.get('/:tweetId', (req, res) => {
 router.post('/', (req, res) => {
   const tweet = new Tweet({
     description: req.body.description,
-    owner: req.body.owner
+    owner: {
+      name: req.body.owner.name,
+      lastName: req.body.owner.lastName,
+      userName: req.body.owner.userName
+    }
   });
 
   tweet.save()

@@ -63,7 +63,6 @@ router.post('/signup', function (req, res) {
                         message: 'User created!',
                         newUser: {
                             name: result.name,
-                            name: result.name,
                             lastName: result.lastName,
                             userName: result.userName,
                             password: result.password,
